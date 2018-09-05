@@ -87,13 +87,13 @@ class AllCourses extends Component {
             <div>
                 <MenuNav />
                 <Loader style={{zIndex: '1', width: '90%', margin: 'auto', marginTop: '90px', marginBottom: '0px'}} active={loading} inline='centered' />
-                <Card.Group centered stackable style={{zIndex: '0', width: '75%', margin: 'auto', marginTop: '90px'}}>
+                <Card.Group centered stackable style={{zIndex: '0', width: '90%', margin: 'auto', marginTop: '90px'}}>
 
                     {
                         courses &&
                             courses.map((course) => {
                             return (
-                                <Card raised key={course._id} style={{width: '30%'}}>
+                                <Card raised key={course._id} >
                                   <Card.Content>
                                     <Image floated='right' size='mini' src={course.image} />
                                     <Card.Header>{course.name}</Card.Header>
