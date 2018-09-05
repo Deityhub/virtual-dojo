@@ -33,6 +33,10 @@ class AdminLogin extends Component {
 
         let { username, password } = this.state;
 
+        if(username.trim() != '' && password != '' ){
+
+        }
+
         try {
             // statements
             REQ_POST('admin/login', { username: username.trim(), password })
@@ -49,7 +53,8 @@ class AdminLogin extends Component {
                                 loading: false
                             })
                         } else {
-                            alert('Error in network connection, try again');
+                            // alert('Error in network connection, try again');
+                            alert('Unauthorised access...')
                             this.setState({
                                 loading: false
                             })
@@ -81,11 +86,11 @@ class AdminLogin extends Component {
                                 <Form style={container} onSubmit={this.handleSubmit} loading={loading}>
                     			    <Form.Field>
                     			      <label>Username</label>
-                    			      <input name="username" placeholder='Username' value={this.username} onChange={this.handleChange} />
+                    			      <input name="username" placeholder='Username' value={this.username} onChange={this.handleChange} required />
                     			    </Form.Field>
                     			    <Form.Field>
                     			      <label>Password</label>
-                    			      <input name="password" type="password" placeholder='Password' value={this.password} onChange={this.handleChange} />
+                    			      <input name="password" type="password" placeholder='Password' value={this.password} onChange={this.handleChange} required />
                     			    </Form.Field>
                     			    <Button type='submit' inverted primary>Login</Button>
                     		    </Form>

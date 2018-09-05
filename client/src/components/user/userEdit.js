@@ -43,7 +43,6 @@ class UserEdit extends Component {
                         email: res.data.email
                     }) 
                 }else {
-                    alert('Error in Network Connection');
                     this.setState({
                         loading: false
                     })
@@ -161,9 +160,9 @@ class UserEdit extends Component {
                         <Grid.Row style={{margin: '10px'}}>
                             <Form onSubmit={this.handleImageUpdate} encType="multipart/form-data">
                                 <Form.Field>
-                                  <Input accept=".jpeg .png .jpg" id="image" placeholder='update image' type="file" onChange={this.handleImage}/>
+                                  <Input accept=".jpeg .png .jpg" id="image" placeholder='update image' type="file" onChange={this.handleImage} required/>
                                 </Form.Field>
-                                <Button >Edit Picture</Button>
+                                <Button >Save Picture</Button>
                             </Form>
                         </Grid.Row>
 
@@ -172,15 +171,15 @@ class UserEdit extends Component {
                         <Form loading={loading} onSubmit={this.handleSubmit}>
                             <Form.Field>
                               <label>First Name</label>
-                              <input name="firstName" placeholder='First Name' value={firstName} onChange={this.handleChange} />
+                              <input name="firstName" placeholder='First Name' value={firstName} onChange={this.handleChange} required />
                             </Form.Field>
                             <Form.Field>
                               <label>Last Name</label>
-                              <input name="lastName" placeholder='Last Name' value={lastName} onChange={this.handleChange} />
+                              <input name="lastName" placeholder='Last Name' value={lastName} onChange={this.handleChange} required />
                             </Form.Field>
                             <Form.Field>
                               <label>Email</label>
-                              <input name="email" placeholder='email' value={email} onChange={this.handleChange} />
+                              <input name="email" placeholder='email' value={email} onChange={this.handleChange} required />
                             </Form.Field>
                             <Button type='submit'>Edit Details</Button>
                         </Form>
@@ -201,9 +200,9 @@ class UserEdit extends Component {
                             <Grid.Row style={{margin: '10px'}}>
                                 <Form onSubmit={this.handleImageUpdate} encType="multipart/form-data" style={imageUpdate}>
                                     <Form.Field>
-                                      <Input accept=".jpeg .png .jpg" id="image" placeholder='update image' type="file" onChange={this.handleImage}/>
+                                      <Input accept=".jpeg .png .jpg" id="image" placeholder='update image' type="file" required onChange={this.handleImage}/>
                                     </Form.Field>
-                                    <Button >Edit Picture</Button>
+                                    <Button >Save Picture</Button>
                                 </Form>
                             </Grid.Row>
 
@@ -214,15 +213,15 @@ class UserEdit extends Component {
                     		<Form loading={loading} onSubmit={this.handleSubmit} style={imageUpdate}>
                                 <Form.Field>
                                   <label>First Name</label>
-                                  <input name="firstName" placeholder='First Name' value={firstName} onChange={this.handleChange} />
+                                  <input name="firstName" placeholder='First Name' value={firstName} onChange={this.handleChange} required />
                                 </Form.Field>
                                 <Form.Field>
                                   <label>Last Name</label>
-                                  <input name="lastName" placeholder='Last Name' value={lastName} onChange={this.handleChange} />
+                                  <input name="lastName" placeholder='Last Name' value={lastName} onChange={this.handleChange} required />
                                 </Form.Field>
                                 <Form.Field>
                                   <label>Email</label>
-                                  <input name="email" placeholder='email' value={email} onChange={this.handleChange} />
+                                  <input name="email" placeholder='email' value={email} onChange={this.handleChange} required />
                                 </Form.Field>
                                 <Button type='submit'>Edit Details</Button>
                             </Form>

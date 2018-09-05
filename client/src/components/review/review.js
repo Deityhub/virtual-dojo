@@ -76,7 +76,7 @@ class Review extends Component {
                     </Header>
                     <Form loading={loading} onSubmit={this.handleReviewSubmit} style={{width: '60%', margin: 'auto'}}>
                         <Form.Field>
-                          <TextArea placeholder='Tell us about your experience' value={review} onChange={this.handleChange} style={{height: '150px'}} />
+                          <TextArea placeholder='Tell us about your experience' value={review} onChange={this.handleChange} style={{height: '150px'}} required />
                         </Form.Field>
                         <Button type='submit' color="blue" inverted >Submit</Button>
                     </Form>

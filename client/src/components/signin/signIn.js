@@ -57,7 +57,7 @@ class SignIn extends Component {
             REQ_POST(`users/login`, {username: username.trim(),password})
             .then(res => {
 
-                if(res.data){
+                if(res){
                   //ONLY USE RES FOR SUCCESS AND RES.RESPONSE FOR ERROR HANDLING
                   if(res.response){
                     this.setState({
