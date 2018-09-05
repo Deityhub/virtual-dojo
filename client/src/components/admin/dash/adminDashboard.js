@@ -124,7 +124,6 @@ class AdminDashboard extends Component {
                                                             <Feed.Event key={user._id}>
                                                               <Feed.Label image={user.profile_pics} />
                                                               <Feed.Content>
-                                                                <Feed.Date content={user.time} />
                                                                 <Feed.Summary style={{fontWeight: '500'}}>
                                                                   {`${user.firstName} ${user.lastName}`}
                                                                 </Feed.Summary>
@@ -156,7 +155,6 @@ class AdminDashboard extends Component {
                                                         <Feed.Event key={video._id}>
                                                           <Feed.Label icon="video" />
                                                           <Feed.Content>
-                                                            <Feed.Date content={video.time} />
                                                             <Feed.Summary style={{fontWeight: '500'}}>
                                                               {video.name}
                                                             </Feed.Summary>

@@ -17,9 +17,8 @@ import AdminDashboard from './admin/dash/adminDashboard';
 import Video from './course/video';
 import CategoryDetail from './category/categoryDetail';
 import Review from './review/review'
-
+import About from './about/about';
 import HandleAuth from './admin/handleAuth';
-
 import ListCategories from './admin/courseCategories/listCategories';
 import ListCourses from './admin/course/listCourse';
 import CreateCategory from './admin/courseCategories/createCategory';
@@ -60,6 +59,7 @@ class Container extends Component {
                         <Route path="/category" component={Category} />
                         <Route path="/login" component={SignIn} />
                         <Route path="/signup" component={SignUp} />
+                        <Route path="/about" component={About} />
 
                         <Route exact path="/" component={Home} />
                         <Route component={NotFound} />
